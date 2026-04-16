@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Ficha RPG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ficha de Personagem</h1>
+<header class="cabecalho">
+    <div class="campo-nome">
+        <label for="nome">Nome do Personagem</label>
+        <input type="text" id="nome" placeholder="Digite o nome aqui...">
+    </div>
+</header>
+<div class="foto-container">
+    <div class="moldura-foto" onclick="document.getElementById('upload-foto').click()">
+        <img id="foto-personagem" src="#" alt="Clique para carregar foto" style="display: none;">
+        <span id="placeholder-texto">Clique para adicionar foto</span>
+    </div>
+    <input type="file" id="upload-foto" accept="image/*" style="display: none;" onchange="carregarImagem(event)">
+</div>
+        <section class="status">
+    <div class="barra-grupo">
+        <label>Vida (PV)</label>
+        <input type="number" class="status-input" id="pv-atual" placeholder="Atual"> / 
+        <input type="number" class="status-input" id="pv-max" placeholder="Max">
+    </div>
+    <div class="barra-grupo">
+        <label>Sanidade (SAN)</label>
+        <input type="number" class="status-input" id="san-atual" placeholder="Atual"> / 
+        <input type="number" class="status-input" id="san-max" placeholder="Max">
+    </div>
+
+</section>
+        <section class="atributos">
+            <h2>Atributos</h2>
+            <div class="grid-atributos">
+                <div class="campo"><label>Força</label><input type="number" id="forca" value="0"></div>
+                <div class="campo"><label>Inteligência</label><input type="number" id="inteligencia" value="0"></div>
+                <div class="campo"><label>Agilidade</label><input type="number" id="agilidade" value="0"></div>
+                <div class="campo"><label>Vontade</label><input type="number" id="vontade" value="0"></div>
+                <div class="campo"><label>Percepção</label><input type="number" id="percepcao" value="0"></div>
+                <div class="campo"><label>Ocultismo</label><input type="number" id="ocultismo" value="0"></div>
+            </div>
+        </section>
+
+        <section class="pericias">
+            <section class="extras">
+    <div class="caixa-texto">
+        <h2>Inventário & Itens</h2>
+        <textarea id="inventario" rows="8" placeholder="Armas, munição, itens de cura..."></textarea>
+    </div>
+
+    <div class="caixa-texto">
+        <h2>Habilidades & Notas</h2>
+        <textarea id="habilidades" rows="8" placeholder="Poderes do seu sistema, rituais ou notas de história..."></textarea>
+    </div>
+</section>
+            <h2>Perícias (Treinamento)</h2>
+            <div id="lista-pericias">
+                <div class="pericia-item"><span>Acrobacia (AGI)</span><select><option>0</option><option>+5</option><option>+10</option><option>+15</option></select></div>
+                <div class="pericia-item"><span>Furtividade (AGI)</span><select><option>0</option><option>+5</option><option>+10</option><option>+15</option></select></div>
+                <div class="pericia-item"><span>Pilotagem (AGI)</span><select><option>0</option><option>+5</option><option>+10</option><option>+15</option></select></div>
+                <div class="pericia-item"><span>Pontaria (PER/AGI)</span><select><option>0</option><option>+5</option><option>+10</option><option>+15</option></select></div>
+                <div class="pericia-item"><span>Reflexos (AGI)</span><select><option>0</option><option>+5</option><option>+10</option><option>+15</option></select></div>
+
+                <div class="pericia-item"><span>Atletismo (FOR)</span><select><option>0</option><option>+5</option><option>+10</option><option>+15</option></select></div>
+                <div class="pericia-item"><span>Luta (FOR)</span><select><option>0</option><option>+5</option><option>+10</option><option>+15</option></select></div>
+
+                <div class="pericia-item"><span>Atualidades (INT)</span><select><option>0</option><option>+5</option><option>+10</option><option>+15</option></select></div>
+                <div class="pericia-item"><span>Ciências (INT)</span><select><option>0</option><option>+5</option><option>+10</option><option>+15</option></select></div>
+                <div class="pericia-item"><span>Investigação (INT)</span><select><option>0</option><option>+5</option><option>+10</option><option>+15</option></select></div>
+                <div class="pericia-item"><span>Medicina (INT)</span><select><option>0</option><option>+5</option><option>+10</option><option>+15</option></select></div>
+                <div class="pericia-item"><span>Tática (INT)</span><select><option>0</option><option>+5</option><option>+10</option><option>+15</option></select></div>
+                <div class="pericia-item"><span>Tecnologia (INT)</span><select><option>0</option><option>+5</option><option>+10</option><option>+15</option></select></div>
+
+                <div class="pericia-item"><span>Intuição (PER)</span><select><option>0</option><option>+5</option><option>+10</option><option>+15</option></select></div>
+                <div class="pericia-item"><span>Percepção (PER)</span><select><option>0</option><option>+5</option><option>+10</option><option>+15</option></select></div>
+                <div class="pericia-item"><span>Sobrevivência (PER)</span><select><option>0</option><option>+5</option><option>+10</option><option>+15</option></select></div>
+
+                <div class="pericia-item"><span>Diplomacia (VON)</span><select><option>0</option><option>+5</option><option>+10</option><option>+15</option></select></div>
+                <div class="pericia-item"><span>Enganação (VON)</span><select><option>0</option><option>+5</option><option>+10</option><option>+15</option></select></div>
+                <div class="pericia-item"><span>Intimidação (VON)</span><select><option>0</option><option>+5</option><option>+10</option><option>+15</option></select></div>
+                <div class="pericia-item"><span>Vontade (VON)</span><select><option>0</option><option>+5</option><option>+10</option><option>+15</option></select></div>
+
+                <div class="pericia-item"><span>Ocultismo (OCU)</span><select><option>0</option><option>+5</option><option>+10</option><option>+15</option></select></div>
+                <div class="pericia-item"><span>Religião (OCU/VON)</span><select><option>0</option><option>+5</option><option>+10</option><option>+15</option></select></div>
+            </div>
+        </section>
+
+        <button onclick="salvarFicha()">Salvar Personagem</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
