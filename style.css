@@ -308,3 +308,18 @@ textarea:focus {
     padding: 10px;
     resize: none; /* Impede o usuário de bagunçar o layout puxando o canto */
 }
+.atributo input {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #ff4500;
+    color: white;
+    font-size: 1.5rem;
+    width: 50px;
+    text-align: center;
+    outline: none;
+}
+
+.atributo input:focus {
+    border-bottom-color: white;
+    transition: 0.3s;
+}
