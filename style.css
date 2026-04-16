@@ -207,3 +207,67 @@ textarea:focus {
         grid-template-columns: 1fr;
     }
 }
+/* Container que coloca os blocos lado a lado */
+.topo-ficha {
+    display: flex;
+    justify-content: space-around; /* Dá um espaço equilibrado entre eles */
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.03); /* Um fundo sutil para destacar */
+    border-radius: 10px;
+}
+
+/* Ajuste do lado esquerdo */
+.lado-esquerdo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1; /* Faz ocupar espaço proporcional */
+}
+
+/* Ajuste do lado direito */
+.lado-direito {
+    flex: 2; /* Atributos ganham um pouco mais de largura que a foto */
+}
+
+.status-vida {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.status-vida input {
+    width: 60px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff4500;
+}
+
+/* Grid de atributos para ficar organizado */
+.atributos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas de atributos */
+    gap: 15px;
+}
+
+.atributo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #222;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #444;
+}
+
+/* Responsividade: No celular, volta a ficar um embaixo do outro */
+@media (max-width: 768px) {
+    .topo-ficha {
+        flex-direction: column;
+        align-items: center;
+    }
+}

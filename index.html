@@ -15,14 +15,50 @@
         <input type="text" id="nome" placeholder="Digite o nome aqui...">
     </div>
 </header>
-<div class="foto-container">
-    <div class="moldura-foto" onclick="document.getElementById('upload-foto').click()">
-        <img id="foto-personagem" src="#" alt="Clique para carregar foto" style="display: none;">
-        <span id="placeholder-texto">Clique para adicionar foto</span>
-    </div>
-    <input type="file" id="upload-foto" accept="image/*" style="display: none;" onchange="carregarImagem(event)">
+<div class="topo-ficha">
+    
+    <section class="lado-esquerdo">
+        <div class="foto-container">
+            <div class="moldura-foto" onclick="document.getElementById('upload-foto').click()">
+                <img id="foto-personagem" src="#" alt="Clique para carregar foto" style="display: none;">
+                <span id="placeholder-texto">Clique para adicionar foto</span>
+            </div>
+            <input type="file" id="upload-foto" accept="image/*" style="display: none;" onchange="carregarImagem(event)">
+        </div>
+
+        <div class="status-vida">
+            <h3>Vida (PV)</h3>
+            <input type="number" id="pv-atual" placeholder="0">
+            <span>/</span>
+            <input type="number" id="pv-total" placeholder="0">
+        </div>
+    </section>
+
+    <section class="lado-direito">
+        <div class="atributos-grid">
+            <div class="atributo">
+                <label>FOR</label>
+                <input type="number" id="forca">
+            </div>
+            <div class="atributo">
+                <label>AGI</label>
+                <input type="number" id="agilidade">
+            </div>
+            <div class="atributo">
+                <label>INT</label>
+                <input type="number" id="intelecto">
+            </div>
+            <div class="atributo">
+                <label>VIG</label>
+                <input type="number" id="vigor">
+            </div>
+            <div class="atributo">
+                <label>PRE</label>
+                <input type="number" id="presenca">
+            </div>
+        </div>
+    </section>
 </div>
-        <section class="status">
     <div class="barra-grupo">
         <label>Vida (PV)</label>
         <input type="number" class="status-input" id="pv-atual" placeholder="Atual"> / 
